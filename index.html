@@ -1,0 +1,72 @@
+<html>
+ 
+    <head>
+<title>My Family</title>
+    </head>
+    <body align="center">
+      
+        <h1>My Family Book</h1>
+      
+      <div id="member_1">
+         <img src="family.jpg" id="fam1" height="550" width ="250"/><br/><br/><br/>
+      </div>
+      
+     <div id="member_2" style="display:none">
+       <h2>VIKASKUMRA</h2> 
+       <img src="dad.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+     </div>
+
+     <div id="member_3" style="display:none">
+        <h2>VINNYKUMRA</h2> 
+        <img src="mom.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+      </div>
+
+      <div id="member_4" style="display:none">
+        <h2>VRITTIKUMRA</h2> 
+        <img src="me.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+      </div>
+
+      <div id="member_5" style="display:none">
+        <h2>MANNATKUMRA</h2> 
+        <img src="mannat.jpg" id="fam1" height="500" width ="250"/><br/><br/><br/>
+      </div>
+
+
+       <button type="button" id="b1" onclick="nextmember()"> NEXT </button>
+
+       <script>
+           var names = [
+  "My Family Book",
+  "VIKASKUMRA",
+  "VINNYKUMRA",
+  "VRITTIKUMRA",
+  "MANNATKUMRA"
+  ];
+
+var images = [
+  "family.jpg",
+  "dad.jpg",
+  "mom.jpg",
+  "me.jpg",
+  "mannat.jpg",
+  ];
+
+
+
+          var current_member=1;
+           function nextmember()
+           {
+             
+              document.getElementById('member_'+current_member).style.display='none';
+              if(current_member>=5)
+              {
+                current_member=0;
+              }
+               current_member++;
+               document.getElementById('member_'+current_member).style.display='block';
+           }
+
+           
+       </script>
+    </body> 
+</html>
